@@ -10,7 +10,7 @@
   },
   "scripts": {
     "postinstall": "curl -s https://raw.githubusercontent.com/hackreactor-labs/pomander/master/bin/install | bash",
-    "test": "mocha test/index.js --bail",
+    "test": "mocha test/index.js --bail --watch",
     "lint": "eslint ./"
   },
   "dependencies": {
@@ -19,6 +19,8 @@
     "clarifai": "^2.4.0",
     "colors": "^1.1.2",
     "eslint-config-hackreactor": "git://github.com/hackreactor-labs/eslint-config-hackreactor",
+    "jquery": "^3.3.1",
+    "jquery.terminal": "^2.1.0",
     "mocha": "^2.2.5",
     "nock": "^2.15.0",
     "request": "^2.61.0"
