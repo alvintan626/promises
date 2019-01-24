@@ -77,7 +77,7 @@ describe('Promisification', function() {
 
   });
 
-  describe('readFileAndMakeItFunnyAsync', function() {
+  describe.only('readFileAndMakeItFunnyAsync', function() {
     var readFileAndMakeItFunnyAsync = promisificaion.readFileAndMakeItFunnyAsync;
 
     it('should return a promise', function() {

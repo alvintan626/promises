@@ -12,10 +12,10 @@ var pluckFirstLineFromFile = function (filePath, callback) {
   //display all the contents of the file
   //reutrn the first line of the file 
 
-  fs.readFile(filePath, function read(err, data) {
+  fs.readFile(filePath, function(err, data) {
     //if firstline is falsy return an error and null to callback
     //else return null on error and string as 2nd arg
-    if (!data){
+    if (err){
       callback(err, null)
     }
     else {
