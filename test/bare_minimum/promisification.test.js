@@ -77,7 +77,7 @@ describe('Promisification', function() {
 
   });
 
-  describe.only('readFileAndMakeItFunnyAsync', function() {
+  describe('readFileAndMakeItFunnyAsync', function() {
     var readFileAndMakeItFunnyAsync = promisificaion.readFileAndMakeItFunnyAsync;
 
     it('should return a promise', function() {
@@ -99,6 +99,7 @@ describe('Promisification', function() {
     it('should make any errors available in the `catch` block', function(done) {
       readFileAndMakeItFunnyAsync(__dirname + '/../files/nonexistent_file.txt')
         .catch(function(err) {
+          console.log('the error is HERE' + err + 'ENOENT')
           expect(err.code).to.equal('ENOENT');
           done();
         });

@@ -58,9 +58,6 @@ var readFileAndMakeItFunny = function(filePath, callback) {
 
 var readFileAndMakeItFunnyAsync = function(filePath) {
   return fs.readFileAsync(filePath)
-  .catch((err) => {
-    return err.code
-  })
   .then((data) => {
       var funnyFile = data.toString().split('\n')
       .map(function(line) {
